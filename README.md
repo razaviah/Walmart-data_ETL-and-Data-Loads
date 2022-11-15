@@ -26,11 +26,13 @@ First of all, The data model has 3 dimensions : **store**, **date**, **product**
 
 For the fact table, we need 2 fact tables:
 
-* Daily fact table: On the daily level, the row grain is date + store + product. In the daily fact table, in addition to the existing columns from the sales and inventory tables, in the fact table we need one more column called "low_stock_flg". This flag is True when sales_qty in the sales table lower than the stock_on_hand_qty in the inventory at that date.
+* **Daily fact table**: On the daily level, the row grain is date + store + product. In the daily fact table, in addition to the existing columns from the sales and inventory tables, in the fact table we need one more column called "low_stock_flg". This flag is True when sales_qty in the sales table lower than the stock_on_hand_qty in the inventory at that date.
 
-* Weekly fact table: We need the second fact table on weekly base. This week table contains all the aggregate values from the daily fact table and also includes some new columns:
+* **Weekly fact table**: We need the second fact table on weekly base. This week table contains all the aggregate values from the daily fact table and also includes some new columns:
   * eop_stock_on_hand_qty: This is the on hand stock qty at the end of week (Saturday), which means the on hand stock qty of the last day in the week. So you can't simply aggregate it.
     * eop_stock_on_order_qty: This is the on order stock qty at the end of week (Saturday).
     * out_of_stock_times: During one week, how many times when the out_of_stock_flg is True.
     * in_of_stock_times: During one week, how many times when the in_of_stock_flg is True.
     * low_stock_times: During one week, how many times when the low_stock_flg is True. 
+
+So to wrap up, the data model of the project has 3 dimension tables and 2 fact tables (one for daily, one for weekly). The data model can be found from [here](https://docs.google.com/spreadsheets/d/13IS-LuFUzr2_mO6Ea3WFViuHQOYbhtCFUN62xQtbaIA/edit?usp=sharing). 
