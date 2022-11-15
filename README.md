@@ -77,3 +77,5 @@ Update DIM table product
 
 ### Step 6 - Run script again to load data from the original dataset to the data model tables. Check the result sample with the following queries:
 
+    SELECT min(cal_Dt), MAX(cal_dt) FROM walmart_anl.sales_inv_store_dy;
+    SELECT * FROM walmart_anl.product_dim WHERE PROD_KEY=657768;
