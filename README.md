@@ -73,3 +73,7 @@ Update DIM table product
     UPDATE walmart.PRODUCT SET PROD_NAME='CHANGE-2' WHERE PROD_KEY=293693;
     INSERT INTO walmart.PRODUCT VALUES (999999,'ADD-1',2.22, 88.88, 'brand-999', 1, 'active', 4, 'category-4', 1, 'subcategory-1');
     
+### Step 5 - Check if the raw data has been updated.
+
+### Step 6 - Run script again to load data from the original dataset to the data model tables. Check the result sample with the following queries:
+
