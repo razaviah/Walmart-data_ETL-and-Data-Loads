@@ -1,4 +1,4 @@
-# ETL and Data Loads (Walmart data) -- Mini Project branch b
+# ETL and Data Loads (Walmart data) -- Mini Project
 
 ETL and Data Loads (Walmart data), Data Engineering Diploma Program, WeCloudData
 
