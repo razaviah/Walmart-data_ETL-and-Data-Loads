@@ -1,9 +1,5 @@
 # ETL and Data Loads (Walmart data) -- Mini Project
 
-ETL and Data Loads (Walmart data), Data Engineering Diploma Program, WeCloudData
-
-Content developed by: WeCloudData Academy
-
 ## 1. Project Requirements
 
 ### Step 1 - Load The Original Dataset
